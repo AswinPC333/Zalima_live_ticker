@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Photon — Live Ticker </title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container layout">
+
+    <!-- LEFT: MAIN -->
+    <div class="main">
+      <div class="header">
+        <div class="title">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="6" fill="#06b6d4"></rect>
+          </svg>
+          Photon — Live Ticker
+          <div class="muted" style="font-size:13px;margin-left:8px;">
+             • live feed
+          </div>
+        </div>
+
+        <!-- MANUAL SEARCH -->
+        <div class="controls">
+          <input id="symbolInput" class="input" placeholder="Enter symbol (e.g. AAPL)" />
+          <button id="subBtn" class="btn">Subscribe</button>
+          <div id="statusBadge" class="status">Disconnected</div>
+        </div>
+      </div>
+
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty" style="display:none">
+        No subscriptions yet.
+      </div>
+    </div>
+
+    <!-- RIGHT: SIDEBAR -->
+    <aside class="sidebar">
+      <h3 class="sidebar-title">Top 10 Companies</h3>
+      <ul id="companyList" class="company-list"></ul>
+    </aside>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
